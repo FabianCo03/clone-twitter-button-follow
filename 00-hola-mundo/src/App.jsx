@@ -2,34 +2,24 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-    // acá le estoy pasando un elemento (elementos como props)
-    const formattedUserName = <span>@midudev</span>
-
     return(
         <section className='App'>
-            <TwitterFollowCard
-                formattedUserName={formattedUserName}
-                isFollowing
-                userName={"FabianCo03"}
-                name={"Fabián Orjuela"}  />
+            {/* los 3 puntos se llaman 'rest operator */}
+            <TwitterFollowCard isFollowing userName={"FabianCo03"}>
+                Fabián Orjuela
+            </TwitterFollowCard>
 
-            <TwitterFollowCard 
-                formattedUserName={formattedUserName} 
-                isFollowing={false} 
-                userName={"juanormo"} 
-                name={"Juan Orjuela"}  />
+            <TwitterFollowCard isFollowing={false} userName={"juanormo"} >
+                Juan Orjuela
+            </TwitterFollowCard>
 
-            <TwitterFollowCard 
-                formattedUserName={formattedUserName} 
-                isFollowing 
-                userName={"adidas"} 
-                name={"Adidas"}  />
+            <TwitterFollowCard  isFollowing >
+            </TwitterFollowCard>
 
-            <TwitterFollowCard 
-                formattedUserName={formattedUserName} 
-                isFollowing={false} 
-                userName={"3gerardpique"} 
-                name={"Gerard Piqué"}  />
+            <TwitterFollowCard  isFollowing={false} userName={"3gerardpique"} >
+                Gerard Piqué
+            </TwitterFollowCard>
+
         </section>
     )
 }
