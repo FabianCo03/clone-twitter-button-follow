@@ -2,34 +2,34 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
-    const format = (userName) => `@${userName}`
+    // acá le estoy pasando un elemento (elementos como props)
+    const formattedUserName = <span>@midudev</span>
 
     return(
         <section className='App'>
             <TwitterFollowCard
-                formatUserName={format}
+                formattedUserName={formattedUserName}
                 isFollowing
                 userName={"FabianCo03"}
                 name={"Fabián Orjuela"}  />
 
             <TwitterFollowCard 
-                formatUserName={format} 
+                formattedUserName={formattedUserName} 
                 isFollowing={false} 
                 userName={"juanormo"} 
                 name={"Juan Orjuela"}  />
 
             <TwitterFollowCard 
-                formatUserName={format} 
+                formattedUserName={formattedUserName} 
                 isFollowing 
                 userName={"adidas"} 
                 name={"Adidas"}  />
 
             <TwitterFollowCard 
-                formatUserName={format} 
+                formattedUserName={formattedUserName} 
                 isFollowing={false} 
                 userName={"3gerardpique"} 
                 name={"Gerard Piqué"}  />
         </section>
-        
     )
 }
