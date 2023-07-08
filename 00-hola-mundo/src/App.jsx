@@ -2,14 +2,18 @@ import './App.css'
 import { TwitterFollowCard } from './TwitterFollowCard'
 
 export function App() {
+    const FabianCo03 = { isFollowing: true, userName: 'FabianCo03' }
+    const juanormo = { isFollowing: true, userName: 'juanormo' }
+
     return(
         <section className='App'>
+
             {/* los 3 puntos se llaman 'rest operator */}
-            <TwitterFollowCard isFollowing userName={"FabianCo03"}>
+            <TwitterFollowCard {...FabianCo03}>
                 Fabián Orjuela
             </TwitterFollowCard>
 
-            <TwitterFollowCard isFollowing={false} userName={"juanormo"} >
+            <TwitterFollowCard {...juanormo} >
                 Juan Orjuela
             </TwitterFollowCard>
 
